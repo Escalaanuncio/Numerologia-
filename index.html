@@ -242,9 +242,9 @@ document.getElementById("applyCode").addEventListener("click",()=>{
   }
 });
 document.getElementById("buyButton").addEventListener("click",e=>{
-  if(!CHECKOUT_URL.startsWith("https://") || CHECKOUT_URL.includes("COLOQUE_AQUI")){
+  if(!CHECKOUT_URL.startsWith("https://") || CHECKOUT_URL.includes("https://pay.cakto.com.br/w9bzunf_1225730")){
     e.preventDefault();
-    alert("Antes de publicar, adicione o link real do checkout da Cakto no código da página.");
+    alert(".");
   }else{
     e.currentTarget.href=CHECKOUT_URL;
   }
@@ -253,9 +253,8 @@ document.querySelectorAll("[data-legal]").forEach(a=>a.addEventListener("click",
   e.preventDefault();
   const kind=a.dataset.legal;
   const messages={
-    termos:"Adicione aqui seus termos reais de compra, entrega digital, suporte e condições de reembolso.",
-    privacidade:"Adicione aqui sua política de privacidade e informe como os dados pessoais são tratados.",
-    contato:"Adicione aqui um e-mail ou canal de contato real do vendedor."
+    Seguro"
+    "
   };
   alert(messages[kind]);
 }));
