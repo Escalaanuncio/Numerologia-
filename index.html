@@ -246,7 +246,7 @@ document.getElementById("applyCode").addEventListener("click",()=>{
   }
 });
 document.getElementById("buyButton").addEventListener("click",e=>{
-  if(!CHECKOUT_URL.startsWith("https://") || CHECKOUT_URL.includes("COLOQUE_AQUI")){
+  if(!CHECKOUT_URL.startsWith("https://") || CHECKOUT_URL.includes("https://pay.cakto.com.br/3ejyhbt_804504")){
     e.preventDefault();
     alert("Antes de publicar, adicione o link real do checkout da Cakto no código da página.");
   }else{
