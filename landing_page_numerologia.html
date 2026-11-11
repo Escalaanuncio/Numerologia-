@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08080d">
+<title>Os Códigos dos Números | Guia de Numerologia</title>
+<meta name="description" content="Explore os significados simbólicos dos números da sua data de nascimento com um guia prático de numerologia.">
+<style>
+:root{--bg:#08080d;--panel:#111119;--panel2:#171721;--gold:#e7c778;--gold2:#b88b37;--text:#f7f2e7;--muted:#b9b3a5;--line:rgba(231,199,120,.22);--green:#a6e6c1}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% -10%,#28203a 0,#11101b 28%,var(--bg) 65%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55;overflow-x:hidden}
+#stars{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.62}
+main,header,footer{position:relative;z-index:1}
+.wrap{width:min(1060px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(8,8,13,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.navsmall{font-size:.78rem;color:var(--muted)}
+.progress-shell{height:3px;background:#24222b}
+#progress{height:100%;width:20%;background:linear-gradient(90deg,var(--gold2),#fff0b5);transition:width .35s ease}
+.step{display:none;min-height:calc(100svh - 67px);padding:clamp(38px,7vh,82px) 0 56px;animation:rise .45s ease both}
+.step.active{display:flex;align-items:center}
+.content{width:100%;max-width:850px;margin:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800}
+.eyebrow:before{content:"";width:22px;height:1px;background:var(--gold)}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(2.5rem,7.6vw,5.8rem);line-height:.98;letter-spacing:-.055em;margin:22px 0}
+h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.06;letter-spacing:-.04em;margin:18px 0}
+h3{font-size:1.08rem;margin-bottom:8px}
+.gold{color:var(--gold)}
+.lead{max-width:650px;color:#d0cad0;font-size:clamp(1rem,2.2vw,1.2rem)}
+.muted{color:var(--muted)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.book-scene{position:relative;min-height:390px;display:grid;place-items:center}
+.orbit{position:absolute;width:min(340px,85vw);aspect-ratio:1;border:1px solid rgba(231,199,120,.24);border-radius:50%;box-shadow:0 0 80px rgba(173,128,49,.08),inset 0 0 60px rgba(173,128,49,.05)}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed rgba(231,199,120,.22);border-radius:50%;inset:22px;transform:rotate(28deg)}
+.orbit:after{inset:54px;transform:rotate(-32deg)}
+.book{position:relative;width:220px;min-height:300px;padding:28px 20px;border:1px solid #f0d895;border-radius:4px 13px 13px 4px;background:linear-gradient(135deg,#282033,#09090f 65%,#3a2b19);box-shadow:20px 22px 45px #000a, inset 5px 0 0 rgba(255,255,255,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:perspective(900px) rotateY(-9deg)}
+.book:before{content:"";position:absolute;left:10px;top:0;bottom:0;width:1px;background:#e8c97766}
+.book .tiny{font-size:.55rem;letter-spacing:.2em;color:#d9c58e;text-transform:uppercase}
+.book .symbol{font-size:4.2rem;line-height:1.2;color:var(--gold);text-shadow:0 0 30px #d8b75d66;margin:18px 0}
+.book strong{font-family:Georgia,serif;font-size:1.25rem;line-height:1.15;font-weight:500;letter-spacing:.04em}
+.book small{font-size:.63rem;letter-spacing:.13em;color:#d2c8ae;margin-top:20px}
+.pill{display:inline-flex;border:1px solid var(--line);background:#e7c7780b;border-radius:999px;padding:7px 12px;color:#e7d9b4;font-size:.78rem;gap:7px;align-items:center}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{border:0;border-radius:12px;padding:15px 20px;display:inline-flex;justify-content:center;align-items:center;gap:10px;text-decoration:none;font-weight:800;cursor:pointer;transition:transform .2s,filter .2s;font-size:.95rem}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn-primary{color:#17120a;background:linear-gradient(135deg,#f6dfa0,#c89a43);box-shadow:0 8px 28px #c89a432b}
+.btn-secondary{color:var(--text);background:#ffffff08;border:1px solid #ffffff20}
+.btn:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.full{width:100%}
+.fine{font-size:.76rem;color:#a9a3a0;margin-top:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
+.card{padding:22px;border:1px solid var(--line);background:linear-gradient(145deg,#17151eeb,#0f0e15eb);border-radius:18px}
+.card .ico{font-size:1.6rem;margin-bottom:12px;display:block}
+.card p{font-size:.91rem;color:var(--muted);margin:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.list{display:grid;gap:12px;margin:22px 0}
+.list-item{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:13px;background:#ffffff06;border:1px solid #ffffff0d}
+.check{flex:0 0 25px;height:25px;display:grid;place-items:center;border-radius:50%;background:#e7c7781b;color:var(--gold);font-weight:900}
+.quote{border:1px solid var(--line);background:#15131b;padding:22px;border-radius:16px;color:#e6dfd4}
+.quote p{margin-bottom:9px}
+.quote small{color:var(--muted)}
+.notice{border-left:3px solid var(--gold);padding:12px 15px;background:#e7c7780b;color:#d0c8b8;font-size:.86rem;border-radius:0 9px 9px 0}
+.offer{max-width:610px;margin:24px auto 0;border:1px solid #d9b85d75;border-radius:22px;background:linear-gradient(160deg,#1d1924,#0e0d13 70%);padding:clamp(22px,5vw,38px);box-shadow:0 20px 80px #0005;text-align:center}
+.old-price{color:#999;text-decoration:line-through}
+.price{font-size:clamp(2.8rem,7vw,4.3rem);line-height:1;font-weight:900;letter-spacing:-.05em;margin:7px 0 12px}
+.price small{font-size:1rem;letter-spacing:0}
+.promo{margin-top:22px;padding:16px;border:1px dashed #e7c7787a;border-radius:14px;background:#e7c7780a;text-align:left}
+.promo-row{display:flex;gap:8px;margin-top:10px}
+input{min-width:0;width:100%;background:#08080d;color:var(--text);border:1px solid #ffffff2a;border-radius:10px;padding:13px;font:inherit;text-transform:uppercase}
+.message{font-size:.85rem;margin-top:8px;min-height:1.3em;color:var(--green)}
+footer{border-top:1px solid #ffffff10;padding:25px 0 36px;color:#a9a3a0;font-size:.76rem}
+.footerlinks{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0}
+footer a{color:#d6c48e}
+.stepnum{font-size:.76rem;color:#aaa2a2;letter-spacing:.13em;text-transform:uppercase}
+.stepnav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:34px;padding-top:20px;border-top:1px solid #ffffff12}
+.back{background:transparent;border:0;color:#bcb5b1;padding:12px 0;cursor:pointer}
+.next{min-width:155px}
+.dots{display:flex;gap:7px;align-items:center;margin-top:24px}
+.dot{width:7px;height:7px;border-radius:20px;background:#514b50;transition:all .2s}
+.dot.on{width:24px;background:var(--gold)}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr;gap:4px}.book-scene{min-height:310px;order:-1}.book{width:176px;min-height:240px}.book .symbol{font-size:3.3rem;margin:10px 0}.orbit{width:270px}.cards{grid-template-columns:1fr}.two{grid-template-columns:1fr}.step{padding:34px 0 34px;min-height:calc(100svh - 67px)}h1{font-size:clamp(2.65rem,13vw,4.3rem)}.navsmall{display:none}.stepnav{margin-top:26px}.btn{padding:14px 16px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<header>
+  <div class="wrap nav">
+    <div class="brand">✧ Códigos dos Números</div>
+    <div class="navsmall">Guia digital · Numerologia para iniciantes</div>
+    <div class="pill" id="topStep">Etapa 1 de 5</div>
+  </div>
+  <div class="progress-shell"><div id="progress"></div></div>
+</header>
+
+<main class="wrap">
+  <!-- ETAPA 1 -->
+  <section class="step active" data-step="1" aria-labelledby="title1">
+    <div class="content hero-grid">
+      <div>
+        <span class="eyebrow">Um guia para explorar os números</span>
+        <h1 id="title1">Os números têm histórias.<br><span class="gold">Conheça a sua.</span></h1>
+        <p class="lead">Descubra como a numerologia interpreta simbolicamente sua data de nascimento — com cálculos simples, significados tradicionais e exercícios para refletir sobre si e seus relacionamentos.</p>
+        <div class="actions">
+          <button class="btn btn-primary" data-next>Descobrir o guia <span aria-hidden="true">→</span></button>
+          <span class="pill">PDF digital · Leitura no celular</span>
+        </div>
+        <p class="fine">Uma experiência de autoconhecimento simbólico — não uma forma de prever o futuro ou comprovar o que outra pessoa pensa.</p>
+        <div class="dots" aria-label="Progresso da apresentação"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      </div>
+      <div class="book-scene" aria-label="Capa ilustrativa do e-book">
+        <div class="orbit"></div>
+        <div class="book"><span class="tiny">Guia de numerologia</span><div class="symbol">✧ 7 ✧</div><strong>OS CÓDIGOS<br>DOS NÚMEROS</strong><small>CALCULE · EXPLORE · REFLITA</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETAPA 2 -->
+  <section class="step" data-step="2" aria-labelledby="title2">
+    <div class="content">
+      <span class="eyebrow">Etapa 02 · O que você vai aprender</span>
+      <h2 id="title2">Mais do que curiosidade.<br><span class="gold">Um guia para explorar.</span></h2>
+      <p class="lead">Um material organizado para você entender os conceitos básicos e experimentar os cálculos sem se perder em explicações complicadas.</p>
+      <div class="cards">
+        <article class="card"><span class="ico">✧</span><h3>Faça os cálculos</h3><p>Aprenda o passo a passo do número de caminho de vida com exemplos resolvidos.</p></article>
+        <article class="card"><span class="ico">☷</span><h3>Explore os significados</h3><p>Conheça interpretações tradicionais associadas aos números de 1 a 9.</p></article>
+        <article class="card"><span class="ico">☽</span><h3>Reflita sobre relações</h3><p>Use os simbolismos como ponto de partida para pensar em afinidades e diferenças.</p></article>
+      </div>
+      <div class="two">
+        <div class="list-item"><span class="check">✓</span><div><strong>Explicação para iniciantes</strong><br><span class="muted">Sem precisar conhecer numerologia antes.</span></div></div>
+        <div class="list-item"><span class="check">✓</span><div><strong>Exercícios práticos</strong><br><span class="muted">Para aplicar os conceitos durante a leitura.</span></div></div>
+      </div>
+      <div class="stepnav"><button class="back" data-prev>← Voltar</button><button class="btn btn-primary next" data-next>Ver a experiência →</button></div>
+      <div class="dots"><span class="dot"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    </div>
+  </section>
+
+  <!-- ETAPA 3 -->
+  <section class="step" data-step="3" aria-labelledby="title3">
+    <div class="content">
+      <span class="eyebrow">Etapa 03 · Conheça o material</span>
+      <h2 id="title3">Veja o que existe<br><span class="gold">dentro do guia.</span></h2>
+      <p class="lead">O e-book foi pensado para ser consultado no seu ritmo, com conceitos, exemplos e atividades organizadas em uma sequência simples.</p>
+      <div class="two">
+        <article class="card"><span class="pill">Capítulo 01</span><h3 style="margin-top:14px">Fundamentos</h3><p>O que é numerologia e como entender suas tradições simbólicas.</p></article>
+        <article class="card"><span class="pill">Capítulo 02</span><h3 style="margin-top:14px">Seu caminho de vida</h3><p>Como calcular o número a partir da data de nascimento, com exemplos.</p></article>
+        <article class="card"><span class="pill">Capítulo 03</span><h3 style="margin-top:14px">Números de 1 a 9</h3><p>Significados tradicionais, qualidades associadas e questões para refletir.</p></article>
+        <article class="card"><span class="pill">Capítulos 04–05</span><h3 style="margin-top:14px">Relações e exercícios</h3><p>Comparações simbólicas, fichas de prática e perguntas de autoconhecimento.</p></article>
+      </div>
+      <div class="notice">Transparência: o material apresenta numerologia como prática simbólica. Ela não comprova traição, inveja, intenções ocultas ou acontecimentos futuros.</div>
+      <div class="stepnav"><button class="back" data-prev>← Voltar</button><button class="btn btn-primary next" data-next>Por que este guia? →</button></div>
+      <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div>
+    </div>
+  </section>
+
+  <!-- ETAPA 4 -->
+  <section class="step" data-step="4" aria-labelledby="title4">
+    <div class="content">
+      <span class="eyebrow">Etapa 04 · Sua decisão</span>
+      <h2 id="title4">Um começo simples para<br><span class="gold">explorar a numerologia.</span></h2>
+      <p class="lead">Se você tem curiosidade sobre os números e quer aprender um método organizado, este guia reúne os fundamentos em um único material digital.</p>
+      <div class="list">
+        <div class="list-item"><span class="check">✓</span><div><strong>Consulte quando quiser</strong><br><span class="muted">Material digital para ler no celular, tablet ou computador.</span></div></div>
+        <div class="list-item"><span class="check">✓</span><div><strong>Aprenda no seu ritmo</strong><br><span class="muted">Cálculos e exemplos explicados em etapas.</span></div></div>
+        <div class="list-item"><span class="check">✓</span><div><strong>Pratique enquanto aprende</strong><br><span class="muted">Exercícios para organizar suas próprias interpretações.</span></div></div>
+      </div>
+      <div class="quote"><p>“Um guia introdutório deve ajudar você a aprender o processo — não prometer respostas infalíveis sobre outras pessoas.”</p><small>O compromisso deste material: explicar, demonstrar e estimular reflexão.</small></div>
+      <div class="notice" style="margin-top:20px">Esta página está em fase de preparação. Antes de publicar, confirme que o PDF final contém todos os capítulos e exercícios descritos acima.</div>
+      <div class="stepnav"><button class="back" data-prev>← Voltar</button><button class="btn btn-primary next" data-next>Ver condição de acesso →</button></div>
+      <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot on"></span><span class="dot"></span></div>
+    </div>
+  </section>
+
+  <!-- ETAPA 5 -->
+  <section class="step" data-step="5" aria-labelledby="title5">
+    <div class="content">
+      <div style="text-align:center">
+        <span class="eyebrow">Etapa 05 · Acesso ao guia</span>
+        <h2 id="title5">Sua próxima descoberta<br><span class="gold">começa aqui.</span></h2>
+        <p class="lead" style="margin:0 auto">Acesse o guia digital e explore os fundamentos da numerologia no seu ritmo.</p>
+      </div>
+      <div class="offer">
+        <div class="book" style="margin:0 auto 24px;width:135px;min-height:176px;padding:15px"><span class="tiny">Guia digital</span><div class="symbol" style="font-size:2.4rem;margin:8px 0">✧ 7 ✧</div><strong style="font-size:.83rem">OS CÓDIGOS<br>DOS NÚMEROS</strong><small style="font-size:.5rem;margin-top:10px">PDF</small></div>
+        <span class="pill">Oferta de lançamento</span>
+        <div style="margin-top:18px"><span class="old-price">De R$ 25,00</span></div>
+        <div class="price"><small>R$</small> 19,99</div>
+        <p class="muted">Pagamento único · Produto digital em PDF</p>
+        <div class="promo">
+          <strong>✧ Código especial de acesso</strong>
+          <p class="muted" style="font-size:.88rem;margin:6px 0 0">Digite o código promocional informado nesta página para validar a condição de R$ 19,99.</p>
+          <div class="promo-row"><input id="promoCode" placeholder="DIGITE SEU CÓDIGO" autocomplete="off" aria-label="Código promocional"><button class="btn btn-secondary" id="applyCode">Validar</button></div>
+          <div class="message" id="promoMessage" aria-live="polite"></div>
+        </div>
+        <a class="btn btn-primary full" id="buyButton" href="#" style="margin-top:18px">Continuar para pagamento ↗</a>
+        <p class="fine">Você será direcionado ao checkout seguro para concluir a compra.</p>
+      </div>
+      <div class="notice" style="max-width:610px;margin:18px auto 0">Antes de publicar: configure o link real do checkout e a condição promocional diretamente na plataforma de pagamento. O código nesta demonstração é apenas visual e não altera o preço cobrado.</div>
+      <div class="stepnav"><button class="back" data-prev>← Voltar</button><span class="muted" style="font-size:.8rem">Última etapa</span></div>
+      <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot on"></span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong class="gold">Os Códigos dos Números</strong>
+    <div class="footerlinks"><a href="#" data-legal="termos">Termos de compra</a><a href="#" data-legal="privacidade">Privacidade</a><a href="#" data-legal="contato">Contato</a></div>
+    <p>Conteúdo educacional e simbólico. Numerologia não é método cientificamente comprovado para prever eventos ou determinar pensamentos e ações de terceiros.</p>
+    <p>© <span id="year"></span> · Substitua este rodapé pelos dados reais do vendedor antes de publicar.</p>
+  </div>
+</footer>
+<script>
+/* CONFIGURAÇÃO ANTES DE PUBLICAR:
+   1) Substitua CHECKOUT_URL pelo link real do produto na Cakto.
+   2) Configure o desconto real no checkout; validar código aqui não altera o valor cobrado.
+   3) Remova qualquer descrição de benefício que não esteja presente no PDF final.
+*/
+const CHECKOUT_URL = "COLOQUE_AQUI_SEU_LINK_REAL_DA_CAKTO";
+const VALID_PROMO_CODES = ["NUMERO19", "CODIGO19", "GUIA1999"];
+let currentStep = 1;
+const sections = [...document.querySelectorAll(".step")];
+function showStep(n){
+  currentStep = Math.max(1,Math.min(5,n));
+  sections.forEach(s=>{const active=Number(s.dataset.step)===currentStep;s.classList.toggle("active",active);s.setAttribute("aria-hidden",String(!active));});
+  document.getElementById("progress").style.width=(currentStep*20)+"%";
+  document.getElementById("topStep").textContent=`Etapa ${currentStep} de 5`;
+  window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+}
+document.querySelectorAll("[data-next]").forEach(b=>b.addEventListener("click",()=>showStep(currentStep+1)));
+document.querySelectorAll("[data-prev]").forEach(b=>b.addEventListener("click",()=>showStep(currentStep-1)));
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("applyCode").addEventListener("click",()=>{
+  const val=document.getElementById("promoCode").value.trim().toUpperCase();
+  const msg=document.getElementById("promoMessage");
+  if(VALID_PROMO_CODES.includes(val)){
+    msg.textContent="Código reconhecido nesta demonstração. O desconto precisa estar configurado no checkout para ser aplicado.";
+    msg.style.color="#a6e6c1";
+  }else{
+    msg.textContent="Código não reconhecido. Confira o código e tente novamente.";
+    msg.style.color="#ffb1a8";
+  }
+});
+document.getElementById("buyButton").addEventListener("click",e=>{
+  if(!CHECKOUT_URL.startsWith("https://") || CHECKOUT_URL.includes("COLOQUE_AQUI")){
+    e.preventDefault();
+    alert("Antes de publicar, adicione o link real do checkout da Cakto no código da página.");
+  }else{
+    e.currentTarget.href=CHECKOUT_URL;
+  }
+});
+document.querySelectorAll("[data-legal]").forEach(a=>a.addEventListener("click",e=>{
+  e.preventDefault();
+  const kind=a.dataset.legal;
+  const messages={
+    termos:"Adicione aqui seus termos reais de compra, entrega digital, suporte e condições de reembolso.",
+    privacidade:"Adicione aqui sua política de privacidade e informe como os dados pessoais são tratados.",
+    contato:"Adicione aqui um e-mail ou canal de contato real do vendedor."
+  };
+  alert(messages[kind]);
+}));
+
+// Partículas leves em canvas, respeitando preferência por movimento reduzido.
+const canvas=document.getElementById("stars"),ctx=canvas.getContext("2d");
+let W=0,H=0,dpr=1,particles=[];
+const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function resize(){
+ dpr=Math.min(window.devicePixelRatio||1,1.7);W=window.innerWidth;H=window.innerHeight;
+ canvas.width=Math.floor(W*dpr);canvas.height=Math.floor(H*dpr);canvas.style.width=W+"px";canvas.style.height=H+"px";ctx.setTransform(dpr,0,0,dpr,0,0);
+ const count=Math.min(70,Math.max(24,Math.floor(W/15)));
+ particles=Array.from({length:count},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.6+.3,a:Math.random()*.55+.12,s:(Math.random()*.22+.04)*(Math.random()<.5?-1:1),phase:Math.random()*6.28}));
+}
+function draw(){
+ ctx.clearRect(0,0,W,H);
+ particles.forEach(p=>{
+  if(!reduceMotion){p.y-=p.s;if(p.y<-4)p.y=H+4;p.phase+=.008;}
+  const alpha=p.a*(.7+.3*Math.sin(p.phase));
+  ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(231,199,120,${alpha})`;ctx.fill();
+ });
+ if(!reduceMotion)requestAnimationFrame(draw);
+}
+window.addEventListener("resize",resize);resize();draw();
+</script>
+</body>
+</html>
